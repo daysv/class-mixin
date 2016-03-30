@@ -1,0 +1,8 @@
+src
+.idea
+.git
+.gitignore
+test
+.travis.yml
+.babelrc
+coverage
