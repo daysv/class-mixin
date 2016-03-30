@@ -1,6 +1,7 @@
 # class-mixin
   [![Build Status](https://travis-ci.org/daysv/class-mixin.svg?branch=master)](https://travis-ci.org/daysv/class-mixin)
-
+  [![codecov.io](https://codecov.io/github/daysv/class-mixin/coverage.svg?branch=master)](https://codecov.io/github/daysv/class-mixin?branch=master)
+  
 Mixin for ES6 classes
 
 # Usage
