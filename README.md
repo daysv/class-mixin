@@ -11,6 +11,8 @@ $ npm install class-mixin -save
 
 ```js
 import mixin from 'class-mixin'
+// or
+var mixin = require('class-mixin').default
 ```
 
 ```js
