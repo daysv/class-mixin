@@ -6,3 +6,5 @@ test
 .travis.yml
 .babelrc
 coverage
+.npmignore
+npm-debug.log
