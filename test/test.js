@@ -2,54 +2,54 @@ import assert from 'assert'
 import EventEmitter from 'events'
 import mixin from '../src'
 
-class Base {
-    constructor() {
-        this.value = 'base'
-    }
-
-    static staticMethod() {
-        return 'err'
-    }
-
-    getName() {
-        return 'Base'
-    }
-
-    getValue() {
-        return this.value
-    }
-
-    getNumber() {
-        return 1
-    }
-}
-
-class Base2 {
-    static staticMethod() {
-        return 'test'
-    }
-
-    getNumber() {
-        return 2
-    }
-
-    get prop() {
-        return this._value + ' ok'
-    }
-
-    set prop(value) {
-        this._value = value
-    }
-}
-
-class Test extends mixin(EventEmitter, Base, Base2) {
-    constructor() {
-        super()
-        this.value = 'test'
-    }
-}
-
 describe('mixin', () => {
+    class Base {
+        constructor() {
+            this.value = 'base'
+        }
+
+        static staticMethod() {
+            return 'err'
+        }
+
+        getName() {
+            return 'Base'
+        }
+
+        getValue() {
+            return this.value
+        }
+
+        getNumber() {
+            return 1
+        }
+    }
+
+    class Base2 {
+        static staticMethod() {
+            return 'test'
+        }
+
+        getNumber() {
+            return 2
+        }
+
+        get prop() {
+            return this._value + ' ok'
+        }
+
+        set prop(value) {
+            this._value = value
+        }
+    }
+
+    class Test extends mixin(EventEmitter, Base, Base2) {
+        constructor() {
+            super()
+            this.value = 'test'
+        }
+    }
+    
     const test = new Test()
     it('should inherits prototypes from EventEmitter', done => {
         test.on('test', ()=> {
