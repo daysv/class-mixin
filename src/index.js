@@ -1,5 +1,3 @@
-import "babel-polyfill"
-
 function mixin(...mixins) {
     class Mix {}
 
@@ -12,7 +10,7 @@ function mixin(...mixins) {
 }
 
 function copyProperties(target, source) {
-    for (let key of Reflect.ownKeys(source)) {
+    for (let key of Object.getOwnPropertyNames(source).concat(Object.getOwnPropertySymbols(source))) {
         if (key !== "constructor" && key !== "prototype" && key !== "name") {
             let desc = Object.getOwnPropertyDescriptor(source, key)
             Object.defineProperty(target, key, desc)

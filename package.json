@@ -1,13 +1,14 @@
 {
   "name": "class-mixin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mixin for ES6 classes",
   "main": "./lib",
   "scripts": {
     "compile": "./node_modules/.bin/babel -d lib/ src/",
     "mocha": "./node_modules/.bin/mocha --compilers js:babel-core/register",
     "test": "npm run compile && npm run mocha",
-    "cover": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register && codecov"
+    "cover": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register",
+    "codecov": "npm run cover && codecov"
   },
   "repository": {
     "type": "git",
@@ -35,8 +36,5 @@
     "codecov": "^1.0.1",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^2.4.5"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.7.4"
   }
 }
