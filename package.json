@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "./node_modules/.bin/babel -d lib/ src/",
     "mocha": "./node_modules/.bin/mocha --compilers js:babel-core/register",
-    "test": "npm run compile && npm run mocha",
+    "test": "npm run mocha",
     "cover": "./node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register",
     "codecov": "npm run cover && codecov"
   },
